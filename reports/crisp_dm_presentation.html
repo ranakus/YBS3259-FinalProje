@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>CRISP-DM Proje Raporu</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; color: #333; margin: 40px; }
+        h1 { color: #001338; border-bottom: 2px solid #00f2ff; padding-bottom: 10px; }
+        .kutu { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-left: 5px solid #7000ff; }
+        h2 { color: #7000ff; margin-top: 0; }
+    </style>
+</head>
+<body>
+    <h1>⚽ Uluslararası Futbol Maç Sonucu Tahminleyicisi - CRISP-DM Raporu</h1>
+    
+    <div class="kutu">
+        <h2>1. İş Anlayışı (Business Understanding)</h2>
+        <p>Uluslararası futbol maçlarının sonuçlarını (Ev Sahibi, Deplasman, Beraberlik) tarihsel veri ve takım form durumlarına göre tahmin eden bir Karar Destek Sistemi geliştirmek.</p>
+    </div>
+    
+    <div class="kutu">
+        <h2>2. Veriyi Anlama (Data Understanding)</h2>
+        <p>1980'den günümüze uluslararası maçlar incelendi. Turnuva türü, oynanan ülke, tarafsız saha durumu ve takım formları temel değişkenler olarak belirlendi.</p>
+    </div>
+    
+    <div class="kutu">
+        <h2>3. Veri Hazırlama (Data Preparation)</h2>
+        <p>Kategorik değişkenler Label Encoding ile dönüştürüldü ve X_train, y_train setleri oluşturuldu.</p>
+    </div>
+    
+    <div class="kutu">
+        <h2>4. Modelleme (Modeling)</h2>
+        <p>Ağaç tabanlı bir algoritma olan XGBoost Classifier kullanıldı. Sınıflandırma problemi olarak (0, 1, 2) kurgulandı.</p>
+    </div>
+    
+    <div class="kutu">
+        <h2>5. Değerlendirme (Evaluation)</h2>
+        <p>Test-Time Augmentation (TTA) ve Gerçekçilik Kalibrasyonu ile Positional Bias (Ev sahibi önyargısı) giderildi. Başarı oranları raporlandı.</p>
+    </div>
+    
+    <div class="kutu">
+        <h2>6. Yayına Alma (Deployment)</h2>
+        <p>Streamlit kullanılarak modern, Şampiyonlar Ligi temalı, dinamik animasyonlara sahip bir web arayüzü ile model canlıya alındı.</p>
+    </div>
+</body>
+</html>
